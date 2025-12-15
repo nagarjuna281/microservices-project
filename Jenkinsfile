@@ -6,7 +6,7 @@ pipeline {
             steps {
                 script {
                     withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
-                        sh "docker build -t shaikmustafa/productcatalogservice:latest ."
+                        sh "docker build -t nagarjuna734/microservices-project:productcatalogservice ."
                     }
                 }
             }
@@ -16,7 +16,7 @@ pipeline {
             steps {
                 script {
                     withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
-                        sh "docker push shaikmustafa/productcatalogservice:latest "
+                        sh "docker push nagarjuna734/microservices-project:productcatalogservice"
                     }
                 }
             }
